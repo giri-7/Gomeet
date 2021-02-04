@@ -5,7 +5,7 @@ const Header = () => {
     return(
     <div className="headerContent">
   <nav className="navbar navbar-expand-lg navbar-light bg-light">
-  <img src="./assets/images/GMIcon.png" width="30" height="30" alt="GMIcon" /><a className="navbar-brand" >Go Meet</a>
+  <img src="./assets/images/GMIcon.png" width="30" height="30" alt="GMIcon" /><a className="navbar-brand" href="/">Go Meet</a>
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span className="navbar-toggler-icon"></span>
   </button>
