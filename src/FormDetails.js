@@ -19,7 +19,7 @@ const FormDetails = ({getFormDetails}) => {
   const [getMessage, setMessage] = useState(null);
 
   const [toggleEdit, setToggleEdit] = useState(false);
-  const [getData, setData] = useState(JSON.parse(localStorage.getItem('cardDetails')));
+  const [getData] = useState(JSON.parse(localStorage.getItem('cardDetails')));
 
 
   const handleFirstName = (e) =>{

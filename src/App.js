@@ -33,8 +33,8 @@ const App = ({getFormDetails}) => {
               {(prevState.map((data, index) => {
                   return(
                     <div className="col-lg-3 pb-1 pt-2" key={index}>
-                       <a onClick={()=>handleSchedule(data, index)}>
-                       <div className="card " >
+                       <div onClick={()=>handleSchedule(data, index)}>
+                       <div className="card">
                         <div className="card-header ">
                         <span>Slot No.{data.SlotNo}</span>
                         <span className="float-right">Time <b>{data.Time}</b></span>
@@ -49,7 +49,7 @@ const App = ({getFormDetails}) => {
                           </div>       
                           ))}
                       </div> 
-                      </a>
+                      </div>
                     </div>
                     
                   )
