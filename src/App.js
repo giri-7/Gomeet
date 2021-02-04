@@ -1,15 +1,13 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import './App.css';
 import Header from './components/Header';
 import {connect} from 'react-redux';
-import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 
 
 
 const App = ({getFormDetails}) => {
   let history = useHistory();
-  const dispatch = useDispatch();
 
   function handleSchedule(data, id) {
     localStorage.setItem('cardDetails', JSON.stringify(data));
@@ -17,7 +15,7 @@ const App = ({getFormDetails}) => {
     history.push("/form");
   }
   
-  const [prevState, setState] = React.useState(getFormDetails);
+  const [prevState] = React.useState(getFormDetails);
 
 
   return (

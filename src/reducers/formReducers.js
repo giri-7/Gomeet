@@ -146,7 +146,6 @@ const formData = (state = {formStateDetails: [
 			formStateDetails: [...state.formStateDetails.slice(0, indexToUpdate), action.payload.userUpdatedData, 
 			...state.formStateDetails.slice(indexToUpdate + 1)]
 		}
-		break;
 		
 		default:
 		return state;
