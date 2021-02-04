@@ -1,0 +1,157 @@
+
+.createCampaign{
+  padding: 70px 95px;
+  background-color: #f5f7fc;
+}
+.contentCls{
+  background-color: #fff;
+  padding-left: 22px;
+  padding-right: 22px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+@media screen and (max-width: 600px) {
+  .contentCls{
+    background-color: #fff;
+    padding: 20px;
+  }
+}
+.Create-Form{
+  height: 27px;
+  font-family: Sailec;
+  font-size: 26px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #201d5e;
+}
+.fieldNames{
+  height: 16px;
+  font-family: Sailec;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #201d5e;
+  margin: 0px 0px 16px 0;
+}
+
+.availableBg
+{
+  background-color: rgb(117 247 112 / 66%);
+}
+.bookedBg
+{
+  background-color: rgb(245 87 123 / 66%);
+
+}
+
+/* / */
+
+.navbar-toggler{
+  width: 47px;
+  height: 34px;
+  border:none;
+  margin: 10px;
+}
+.navbar-toggler .line{
+  width: 100%;
+  float: left;
+  height: 2px;
+  background-color: #fff;
+  margin-bottom: 5px;
+}
+
+.headerContent{
+  padding: 22px 80px;
+  background-color: #ffffff;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+}
+
+
+
+.navbar-brand
+{
+  padding-right: 16px;
+}
+.nav-item
+{
+  padding-right: 15px;
+}
+
+
+.Create-Form{
+  height: 27px;
+  font-family: Sailec;
+  font-size: 26px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #201d5e;
+}
+
+
+.formInput
+{
+  height: 50px;  
+  border-radius: 6px;
+  border: solid 1px #b6cbff;
+}
+
+.formDesc{
+  height: 91px;
+  border-radius: 6px;
+  border: solid 1px #b6cbff;
+}
+
+
+
+.css-g1d714-ValueContainer
+{
+  height: 46px;
+
+}
+
+.css-1rhbuit-multiValue{
+  border-radius: 3px;
+  border: solid 0.6px #8cc8ff;
+  background-color: #f5f6ff !important;
+  margin-right: 16px !important;
+}
+
+
+@media screen and (max-width: 600px) {
+  .headerContent{
+    padding: 0px;
+    background-color: #201d5e;
+  }
+  
+  .contentCls{
+    background-color: #fff;
+    padding: 20px;
+  }
+  .createCampaign{
+    padding: 0px;
+    position: absolute;
+  }
+  .fieldNames{
+    font-size: 20px;
+    color: #201d5e;
+  }
+ 
+ 
+  .nav-item{
+    padding-left: 20px;
+  }
+  
+}
+
+
