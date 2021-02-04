@@ -36,18 +36,27 @@ const FormDetails = ({getFormDetails}) => {
   }
   const handleDetails = (e) =>{
     let getDetails = JSON.parse(localStorage.getItem('cardDetails'));
-    let obj = {
-      "name": (getDetails.name) ? getDetails.name : "",
-      "SlotNo": (getDetails.SlotNo) ? getDetails.SlotNo : "",
-      "Time": (getDetails.Time) ? getDetails.Time : "",
-      "FirstName": (getFirstName) ? getFirstName :  getDetails.FirstName,
-      "SecondName": (getSecondName) ? getSecondName : getDetails.SecondName,
-      "Phone": (getPhone) ? getPhone:  getDetails.Phone,
-      "Available": false,
-      "Message": (getMessage) ? getMessage : getDetails.Message  
+    if(getFirstName&&getSecondName&&getPhone||getDetails.FirstName||getDetails.SecondName||getDetails.Phone)
+    {
+      let getDetails = JSON.parse(localStorage.getItem('cardDetails'));
+      let obj = {
+        "name": (getDetails.name) ? getDetails.name : "",
+        "SlotNo": (getDetails.SlotNo) ? getDetails.SlotNo : "",
+        "Time": (getDetails.Time) ? getDetails.Time : "",
+        "FirstName": (getFirstName) ? getFirstName :  getDetails.FirstName,
+        "SecondName": (getSecondName) ? getSecondName : getDetails.SecondName,
+        "Phone": (getPhone) ? getPhone:  getDetails.Phone,
+        "Available": false,
+        "Message": (getMessage) ? getMessage : getDetails.Message  
+      }
+      dispatch(updateUserData(obj, getDetails.SlotNo));
+      history.push('/home')
     }
-    dispatch(updateUserData(obj, getDetails.SlotNo));
-    history.push('/home')
+    else
+    {
+      alert("Please enter Required Fields");
+    }
+   
   }
 
   useEffect(() => {
@@ -73,8 +82,8 @@ const FormDetails = ({getFormDetails}) => {
               <div className="row">
                 <div className="col-lg-6">
                 <div className="form-group">
-                <label className="fieldNames">First Name</label>
-                <input type="text" className="form-control formInput" defaultValue={getData.FirstName} name="firstName" onChange={handleFirstName}   />
+                <label className="fieldNames">First Name <span>*</span></label>
+                <input type="text" className="form-control formInput" defaultValue={getData.FirstName} name="firstName" onChange={handleFirstName} required  />
                 </div>
                 </div>
                </div> 
@@ -82,7 +91,7 @@ const FormDetails = ({getFormDetails}) => {
                <div className="row">
                 <div className="col-lg-6">
                 <div className="form-group">
-                <label className="fieldNames">Last Name</label>
+                <label className="fieldNames">Last Name <span>*</span></label>
                 <input type="text" className="form-control formInput"  defaultValue={getData.SecondName} name="lastName"  onChange={handleSecondName} />
                 </div>
                 </div>
@@ -91,7 +100,7 @@ const FormDetails = ({getFormDetails}) => {
                 <div className="row">
                 <div className="col-lg-6">
                 <div className="form-group">
-                <label className="fieldNames">Phone</label>
+                <label className="fieldNames">Phone <span>*</span></label>
                 <input type="text" className="form-control formInput" defaultValue={getData.Phone} name="phone"  onChange={handlePhone} />
                 </div>
                 </div>
