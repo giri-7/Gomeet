@@ -36,7 +36,7 @@ const FormDetails = ({getFormDetails}) => {
   }
   const handleDetails = (e) =>{
     let getDetails = JSON.parse(localStorage.getItem('cardDetails'));
-    if(getFirstName&&getSecondName&&getPhone||getDetails.FirstName||getDetails.SecondName||getDetails.Phone)
+    if((getFirstName&&getSecondName&&getPhone)||(getDetails.FirstName)||(getDetails.SecondName)||(getDetails.Phone))
     {
       let getDetails = JSON.parse(localStorage.getItem('cardDetails'));
       let obj = {
